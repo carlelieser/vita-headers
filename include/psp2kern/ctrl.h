@@ -182,6 +182,17 @@ int ksceCtrlPeekBufferNegative(int port, SceCtrlData *pad_data, int count);
 int ksceCtrlReadBufferPositive(int port, SceCtrlData *pad_data, int count);
 
 /**
+ * Get the wireless controller extended state information (blocking, positive logic).
+ *
+ * @param[in] port - use 0-5.
+ * @param[out] *pad_data - see ::SceCtrlData.
+ * @param[in] count - Buffers count.
+ *
+ * @return Buffers count. Up to 64 buffers can be requested.
+ */
+int ksceCtrlReadBufferPositiveExt2(int port, SceCtrlData *pad_data, int count);
+
+/**
  * Get the controller state information (blocking, negative logic).
  *
  * @param[in] port - use 0.
